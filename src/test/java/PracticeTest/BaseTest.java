@@ -16,6 +16,7 @@ public class BaseTest extends Base{
 	public static void reverseString(){
 		
 		String str = "Madam";
+		System.out.println("Before String is: "+str);
 		for(int i=str.length()-1; i>=0; i--){
 			str.charAt(i);
 		}
