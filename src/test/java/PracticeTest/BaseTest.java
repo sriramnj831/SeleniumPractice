@@ -1,5 +1,9 @@
 package PracticeTest;
 
+import java.util.ExcelReader;
+
+import org.testng.annotations.DataProvider;
+
 import PracticePage.Base;
 
 public class BaseTest extends Base{
@@ -31,6 +35,12 @@ public class BaseTest extends Base{
 		}
 		System.out.println("Reverse Integer is: "+temp);
 		
+	}
+	
+	@DataProvider
+	public Object[][] getLoginData() throws Exception{
+		Object[][] data = ExcelReader.getTestData("Login");
+		return data;
 	}
 	
 }

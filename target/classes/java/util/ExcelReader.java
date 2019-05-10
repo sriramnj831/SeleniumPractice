@@ -13,7 +13,7 @@ public class ExcelReader {
 	public static String TestDataPath = "C:\\Users\\Sriram N J\\workspace\\SeleniumPractice\\src\\test\\"
 			+ "java\\TestData\\TestDataSheet.xlsx";
 	
-
+//Excel Reader
 	public static Object[][] getTestData(String sheetName) throws Exception{
 	
 		FileInputStream file = new FileInputStream(TestDataPath);
