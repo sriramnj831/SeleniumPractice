@@ -25,6 +25,7 @@ public class BaseTest extends Base{
 	public static void reverseInteger(){
 		
 		long num = 543210;
+		System.out.println("Number before reversal : "+num );
 		long temp = 0;
 		
 		while(num !=0){
@@ -34,6 +35,7 @@ public class BaseTest extends Base{
 			
 		}
 		System.out.println("Reverse Integer is: "+temp);
+		
 		
 	}
 	
