@@ -1,0 +1,7 @@
+<suite name="SeleniumPractise">
+ <test name="testngTest">
+ <classes>
+ <class name="BaseTest" />
+ </classes>
+ </test>
+</suite>
