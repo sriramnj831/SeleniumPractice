@@ -15,7 +15,7 @@ public class Base {
 	@BeforeClass
 	public void setup(){
 		
-		driver.get("https://www.google.com/");
+		driver.get("https://www.spicejet.com");
 		driver.manage().window().maximize();
 		driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);

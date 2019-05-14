@@ -1,17 +1,40 @@
 package PracticeTest;
 
 import java.util.ExcelReader;
+import java.util.List;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.FindBy;
 import org.testng.annotations.DataProvider;
 
 import PracticePage.Base;
 
 public class BaseTest extends Base{
 	
+	@FindBy(xpath="//div")
+	static WebElement all;
+	
+	
 	public static void main(String args[]){
 		reverseString();
 		reverseInteger();
+		diagonalDifference();
+//		login();
+//		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Sriram N J\\Downloads\\chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		driver.get("https://www.spicejet.com");
+//		driver.manage().window().maximize();
+//		driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
+//		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		List<WebElement> elements = driver.findElements(By.xpath("//*"));
+		for(WebElement ele : elements){
+			System.out.println("All: "+ele.getTagName() +" : "+ele.getText());
+		}
 	}
+	
 	
 	public static void reverseString(){
 		
@@ -38,6 +61,39 @@ public class BaseTest extends Base{
 		System.out.println("Reverse Integer is: "+temp);
 		
 		
+	}
+	
+	public static void login(){
+		
+		System.out.println("All : "+all);
+		
+		
+	}
+	
+	public static void diagonalDifference(){
+		int arr[][] = {
+				{ -6,2,3},
+		{4,7,9},
+		{15,8,-2}
+		};
+		int d1 = 0;
+		int d2 = 0;
+		int num = 3;
+		for(int i=0; i<num; i++){
+			d1 += arr[i][i];
+			d2 += arr[i][num-i-1];
+			
+		 int a = arr[i][i];
+		 int b = arr[i][num-i-1];
+		 
+		 if(a>b){
+				System.out.println(a);
+				}else{
+					System.out.println(b);
+				}
+		}
+		
+		System.out.println(Math.abs(d1-d2));
 	}
 	
 	@DataProvider
