@@ -74,7 +74,7 @@ public class BaseTest extends Base{
 		int arr[][] = {
 				{ -6,2,3},
 		{4,7,9},
-		{15,8,-2}
+		{-15,8,-2}
 		};
 		int d1 = 0;
 		int d2 = 0;
@@ -82,17 +82,15 @@ public class BaseTest extends Base{
 		for(int i=0; i<num; i++){
 			d1 += arr[i][i];
 			d2 += arr[i][num-i-1];
-			
-		 int a = arr[i][i];
-		 int b = arr[i][num-i-1];
-		 
-		 if(a>b){
-				System.out.println(a);
-				}else{
-					System.out.println(b);
-				}
 		}
 		
+		
+		if(d1>d2){
+			System.out.println("L2R:"+d1);
+		}else{
+			System.out.println("R2L:"+d2);
+		}
+	
 		System.out.println(Math.abs(d1-d2));
 	}
 	
